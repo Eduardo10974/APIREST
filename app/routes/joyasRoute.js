@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const joyasController = require('../controllers/joyasController')
 
-router.get('/anillo', (req,res) =>{
-    res.json({
-        mensaje: 'Hola Mundo'
-    })
-} );
+
+router.get('/',joyasController.buscarTodo)
 
 
 module.exports = router;
